@@ -1,8 +1,8 @@
 import React from 'react';
-import Profile from './src/screens/Profile';
+import Acceleration from './src/screens/Acceleration';
 
 const App = () => (
-  <Profile/>
+  <Acceleration/>
 )
 
 export default App;

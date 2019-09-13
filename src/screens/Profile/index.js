@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 import {
-  StyleSheet,
   Text,
   View,
   Image,
@@ -10,30 +9,9 @@ import {
   Animated
 } from 'react-native';
 
+import { styles } from './styles';
 
-const profile = {
-  "picture": "https://secure.gravatar.com/avatar/f50a9db56e231198af3507f10b5d5491?d=mm",
-  "email": "rafael.fuzifaru@gmail.com",
-  "first_name": "Rafael",
-  "last_name": "Fuzifaru Cianci",
-  "phone": "(48) 99110-3535",
-  "gender": 1,
-  "birthday": "1993-04-27T00:00:00-03:00",
-  "linkedin": "https://www.linkedin.com/in/rafaelcianci",
-  "github": "http://github.com/rafacianci",
-  "address": {
-    "Street": "",
-    "ZipCode": "",
-    "Number": "",
-    "ComplementaryAddress": ""
-  },
-  "language": ["Português - PT", "Inglês - EN", "Japonês - JA"],
-  "name": "Rafael Fuzifaru Cianci"
-}
-
-const logo = {
-  uri: "https://forum.codenation.com.br/uploads/default/original/2X/2/2d2d2a9469f0171e7df2c4ee97f70c555e431e76.png"
-}
+import { profile } from '../../data/profile';
 
 export default class Profile extends React.PureComponent {
   fadeAnimation = new Animated.Value(0)
@@ -129,81 +107,3 @@ export default class Profile extends React.PureComponent {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  loadingContent: {
-    alignItems: 'center',
-    flex: 1,
-    justifyContent: 'center'
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  header: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    borderBottomColor: '#7800ff',
-    borderBottomWidth: 2,
-    padding: 16,
-    paddingTop: 55
-  },
-  headerImage: {
-    height: 45,
-    width: 250
-  },
-  title: {
-    color: '#7800ff',
-    fontSize: 30,
-    padding: 16,
-  },
-  profileTitle: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    padding: 16
-  },
-  profileImage: {
-    borderRadius: 22,
-    height: 45,
-    width: 45
-  },
-  profileName: {
-    color: '#7800ff',
-    fontSize: 20,
-    paddingLeft: 16
-  },
-  userContent: {
-    backgroundColor: '#000',
-    borderRadius: 2,
-    margin: 16,
-    padding: 16,
-    marginTop: 0
-  },
-  contentLabel: {
-    color: '#FFFFFF',
-    fontSize: 11
-  },
-  contentText: {
-    color: '#FFFFFF',
-    fontSize: 14
-  },
-  mBottom: {
-    marginBottom: 16
-  },
-  languageContent: {
-    alignItems: 'center',
-    flexDirection: 'row'
-  },
-  language: {
-    backgroundColor: '#666',
-    borderRadius: 50,
-    marginRight: 16,
-    marginTop: 8
-  },
-  languageText: {
-    color: '#FFFFFF',
-    fontSize: 14,
-    padding: 5,
-    paddingHorizontal: 10
-  }
-});

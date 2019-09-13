@@ -1,9 +1,4 @@
-import React from 'react';
-import { StyleSheet, Text, View, Image, FlatList } from 'react-native';
-
-import AccelerationItem from '../components/AccelerationItem';
-
-const accelerations = [{
+export const accelerations = [{
   "slug": "reactnative-online-1",
   "name": "React Native",
   "is_disabled": false,
@@ -82,46 +77,3 @@ const accelerations = [{
   "color_scheme": "212133",
   "company_count": 1
 }]
-
-export default function Acceleration() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Image
-          style={styles.headerImage}
-          source={{uri: 'https://forum.codenation.com.br/uploads/default/original/2X/2/2d2d2a9469f0171e7df2c4ee97f70c555e431e76.png'}}
-        />
-      </View>
-      <Text style={styles.title}>Acelerações</Text>
-      <FlatList
-        data={accelerations}
-        keyExtractor={item => item.slug}
-        renderItem={({item, index}) => <AccelerationItem item={item} />}
-      />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-    },
-    header: {
-        alignItems: 'center',
-        flexDirection: 'row',
-        borderBottomColor: '#7800ff',
-        borderBottomWidth: 2,
-        padding: 16,
-        paddingTop: 55
-    },
-    headerImage: {
-        height: 45,
-        width: 250
-    },
-    title: {
-        color: '#7800ff',
-        fontSize: 30,
-        padding: 16
-    }
-});

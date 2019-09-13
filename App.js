@@ -1,8 +1,8 @@
 import React from 'react';
-import Acceleration from './src/screens/Acceleration';
+import Routes from './src/routes';
 
 const App = () => (
-  <Acceleration/>
+  <Routes/>
 )
 
 export default App;

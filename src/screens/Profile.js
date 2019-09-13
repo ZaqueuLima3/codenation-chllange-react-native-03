@@ -32,7 +32,7 @@ const profile = {
 }
 
 const logo = {
-  uri: 'https://forum.codenation.com.br/uploads/default/original/2X/2/2d2d2a9469f0171e7df2c4ee97f70c555e431e76.png',
+  uri: "https://forum.codenation.com.br/uploads/default/original/2X/2/2d2d2a9469f0171e7df2c4ee97f70c555e431e76.png"
 }
 
 export default class Profile extends React.PureComponent {
@@ -70,7 +70,7 @@ export default class Profile extends React.PureComponent {
           <Image
             className="header-image"
             style={styles.headerImage}
-            source={logo}
+            source={{uri: "https://forum.codenation.com.br/uploads/default/original/2X/2/2d2d2a9469f0171e7df2c4ee97f70c555e431e76.png"}}
           />
         </View>
         {this.state.loading && (

@@ -1,13 +1,14 @@
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 
 import Acceleration from './screens/Acceleration';
 import Profile from './screens/Profile';
 
-const Routes = createAppContainer(
-  createSwitchNavigator({
-    Acceleration,
-    Profile,
-  })
-)
 
-export default Routes;
+const Router = createStackNavigator({
+    Acceleration: Acceleration,
+    Profile: Profile
+}, {headerMode: 'none'});
+
+
+export default createAppContainer(Router);

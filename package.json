@@ -16,7 +16,7 @@
   "dependencies": {
     "codenation-jest-score": "https://github.com/thecodenation/codenation-jest-score/tarball/master",
     "expo": "^33.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
